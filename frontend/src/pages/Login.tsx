@@ -64,7 +64,7 @@ export default function Login({ onSwitchToSignup }: LoginProps) {
           }
         } else if (data.role === "hospital") {
           console.log("[v0] Redirecting hospital to dashboard")
-          window.location.href = `http://localhost:3002?token=${data.token}&role=${data.role}&user_id=${data.user_id}`
+          window.location.href = `http://localhost:3002?token=${data.token}&role=${data.role}&user_id=${data.user_id}&profile_complete=${data.profile_complete}&is_login=true`
         }
       }, 0)
     } catch (err) {
